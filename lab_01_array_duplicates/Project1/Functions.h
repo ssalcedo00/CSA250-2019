@@ -1,10 +1,7 @@
-#include <string>
-using namespace std;
-
 /*
 	Salcedo, Salvador
 
-	CSA250
+	CS A250
 	January 2, 2019
 
 	Lab 1
@@ -12,23 +9,23 @@ using namespace std;
 
 // Definition function deleteDuplicates
 void deleteDuplicates(int a[], int& numOfElem) {
-	for (int x = 0; x < numOfElem; x++) {
-		int test = a[x];
-		for (int i = 0; i < numOfElem; i++) {
-			if (test == a[i] && i != x) {
-				for (int j = i; j < numOfElem - 1; j++) {
-					a[j] = a[j + 1];
+	for (int testIdx = 0; testIdx < numOfElem; testIdx++) {
+		int test = a[testIdx];
+		for (int compIdx = 0; compIdx < numOfElem; compIdx++) {
+			if (test == a[compIdx] && testIdx != compIdx) {
+				for (int shiftIdx = compIdx; shiftIdx < numOfElem - 1; shiftIdx++) {
+					a[shiftIdx] = a[shiftIdx + 1];
 				}
-				numOfElem--;
+				--numOfElem;
+				--compIdx;
 			}
 		}
 	}
 }
 
 // Definition function printArray
-void printArray(int a[], int numOfElem) {
+void printArray(const int a[], int numOfElem) {
 	for (int x = 0; x < numOfElem; x++) {
-		cout << a[x];
+		cout << a[x] << " ";
 	}
-	cout << endl;
 }

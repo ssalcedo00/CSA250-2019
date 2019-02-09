@@ -1,0 +1,3 @@
+﻿Main.obj : error LNK2005: "public: __thiscall Ferrari::Ferrari(void)" (??0Ferrari@@QAE@XZ) already defined in Ferrari.obj
+Main.obj : error LNK2005: "public: __thiscall Ferrari::~Ferrari(void)" (??1Ferrari@@QAE@XZ) already defined in Ferrari.obj
+C:\Users\Alex\Documents\GitHub\CSA250\ssalcedo00\CSA250-2019\Lab 2\Debug\Lab 2.exe : fatal error LNK1169: one or more multiply defined symbols found
