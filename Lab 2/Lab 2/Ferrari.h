@@ -9,17 +9,16 @@
 
 #ifndef FERRARI_H
 #define FERRARI_H
+
 #include <iostream>
 #include <cstdlib>
 #include <string>
-
 using namespace std;
 
 class Ferrari {
 public:
 	//Constructors
 	Ferrari();
-
 	Ferrari(const string& newModel, int newYear);
 
 	//Accessor Functions
@@ -35,7 +34,6 @@ public:
 	bool sameCar(const Ferrari & carComp) const;
 
 	//Destructor
-
 	~Ferrari();
 private:
 	string carModel;

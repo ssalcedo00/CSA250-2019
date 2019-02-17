@@ -9,43 +9,44 @@
 
 #ifndef FERRARI_CPP
 #define FERRARI_CPP
+
 #include "Ferrari.h"
 
 Ferrari::Ferrari() {
+	carModel = "No name yet";
+	year = 0;
 }
 
 Ferrari::Ferrari(const string& newModel, int newYear) {
-	this->carModel = newModel;
-	this->year = newYear;
+	carModel = newModel;
+	year = newYear;
 }
 
 string Ferrari::getModel() const {
-	return this->carModel;
+	return carModel;
 }
 
 int Ferrari::getYear() const {
-	return this->year;
+	return year;
 }
 
 void Ferrari::setModel(const string & newModel) {
-	this->carModel = newModel;
+	carModel = newModel;
 }
 
 void Ferrari::setYear(int newYear) {
-	this->year = newYear;
+	year = newYear;
 }
 
 void Ferrari::print() const {
-	cout << this->carModel << " (" << this->year << ")" << endl;
+	cout << carModel << " (" << year << ")" << endl;
 }
 
-bool Ferrari::sameCar(const Ferrari & carComp) const
-{
-	return (this->carModel == carComp.getModel() && this->year == carComp.getYear());
+bool Ferrari::sameCar(const Ferrari & carComp) const {
+	return (carModel == carComp.getModel() && year == carComp.getYear());
 }
 
-Ferrari::~Ferrari()
-{
+Ferrari::~Ferrari() {
 }
 
 #endif // !FERRARI.CPP

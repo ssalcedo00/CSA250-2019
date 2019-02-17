@@ -29,6 +29,10 @@ int main() {
 	cout << "Car Year: " << LaFerrari.getYear() << endl;
 
 
+	LaFerrari.setModel("Caca");
+	LaFerrari.setYear(6969);
+	LaFerrari.print();
+
 	system("Pause");
 	return 0;
 }
