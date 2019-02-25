@@ -44,14 +44,14 @@ int DoublyList::back() const
 }
 
 // Definition function copyToList
-void DoublyList::copyToList(DoublyList & List) const
+void DoublyList::copyToList(DoublyList & list) const
 {
 	Node * current = last;
-	while (List.count != count) 
-	{
-		List.insertFront(current->getData());
+	while (current != nullptr) {
+		list.insertFront(current->getData());
 		current = current->getPrev();
 	}
+	list.count += count;
 }
 
 // Definition function insertInOrder 

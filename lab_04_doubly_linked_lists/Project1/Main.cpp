@@ -59,41 +59,81 @@ int main()
 	intList.reversePrint();
 
 	cout << "\n\nYour testing cases...\n";
+	cout << "\n-----------------------------------------------------\n";
 	// TEST function copyToList
 	// Create two lists, list1 and list2.
 	// Copy list1 (empty) into list2 (empty).
 	// Create list list3.
 	// Copy list1 (non-empty) into list3 (empty).
+
+	cout << "TESTING: Copy list1 (1 2 3) into list2 (5 6 7)" << endl;
+	cout << "\nEXPECTED OUTPUT:" << endl;
+	cout << "List1: 1 2 3" << endl;
+	cout << "List2: 1 2 3 5 6 7" << endl;
+
 	DoublyList list1;
 	DoublyList list2;
 
-	cout << "\nTESTING: copyToList()" << endl;
-	cout << "Copy list1 (empty) into list2 (empty)" << endl;
+	list1.insertFront(3);
+	list1.insertFront(2);
+	list1.insertFront(1);
+	list2.insertFront(7);
+	list2.insertFront(6);
+	list2.insertFront(5);
 
 	list1.copyToList(list2);
 
-	cout << "\nList1: ";
+	cout << "\nACTUAL OUTPUT:" << endl;
+	cout << "List1: ";
 	list1.print();
-	cout << "\nList3: ";
+	cout << "\nList2: ";
 	list2.print();
+	cout << "\n" << endl;
 
-
-	list1.insertFront(1);
-	list1.insertFront(2);
-	list1.insertFront(3);
+	cout << "TESTING: Copy list3 (1 2 3) into list4 (empty)" << endl;
+	cout << "\nEXPECTED OUTPUT:" << endl;
+	cout << "List3: 1 2 3" << endl;
+	cout << "List4: 1 2 3" << endl;
 
 	DoublyList list3;
+	DoublyList list4;
 
-	list1.copyToList(list3);
+	list3.insertFront(3);
+	list3.insertFront(2);
+	list3.insertFront(1);
 
-	cout << "\nTesting: copyToList()" << endl;
-	cout << "\nList1: ";
-	list1.print();
-	cout << "\nList3: ";
+	list3.copyToList(list4);
+
+	cout << "\nACTUAL OUTPUT:" << endl;
+	cout << "List3: ";
 	list3.print();
+	cout << "\nList4: ";
+	list4.print();
+	cout << "\n" << endl;
 
+	cout << "TESTING: Copy list5 (1) into list6 (2 3 4)" << endl;
+	cout << "\nEXPECTED OUTPUT:" << endl;
+	cout << "List5: 1" << endl;
+	cout << "List6: 1 2 3 4" << endl;
 
-	cout << endl << endl;
+	DoublyList list5;
+	DoublyList list6;
+
+	list5.insertFront(1);
+
+	list6.insertFront(4);
+	list6.insertFront(3);
+	list6.insertFront(2);
+
+	list5.copyToList(list6);
+
+	cout << "\nACTUAL OUTPUT:" << endl;
+	cout << "List5: ";
+	list5.print();
+	cout << "\nList6: ";
+	list6.print();
+	cout << "\n" << endl;
+
 	system("Pause");
 	return 0;
 }
