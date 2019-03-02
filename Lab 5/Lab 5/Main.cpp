@@ -1,3 +1,12 @@
+/*
+	Salcedo, Salvador
+
+	CS A250
+	March 1, 2019
+
+	Lab 5
+*/
+
 #include "Vector2D.h"
 
 #include <iostream>
