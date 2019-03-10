@@ -50,6 +50,9 @@ public:
 
 	void swapVal(AnyList& list); //swap values of 2nd and 2nd to last nodes
 
+	//Boolean Functions
+	bool sameEnds(const AnyList& list) const;
+
 private:
 	sNode *first; //pointer to point to the first sNode in the list
 	int count;	      //keeps track of number of sNodes in the list

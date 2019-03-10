@@ -146,6 +146,19 @@ void AnyList::swapVal(AnyList & list) //swap values of 2nd and 2nd to last nodes
 	}
 }
 
+bool AnyList::sameEnds(const AnyList& list) const
+{
+	bool front, back;
+	front = (first->getData() == list.first->getData());
+	sNode * current1 = first;
+	sNode * current2 = list.first;
+	while (current1->getNext() != nullptr) current1 = current1->getNext();
+	while (current2->getNext() != nullptr) current2 = current2->getNext();
+	back = (current1->getData() == current2->getData());
+
+	return (front && back);
+}
+
 AnyList::~AnyList()
 {
 	destroyList();
