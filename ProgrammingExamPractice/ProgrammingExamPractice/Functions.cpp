@@ -1,5 +1,10 @@
 /*
-	Name header
+	Salcedo, Salvador
+
+	CS A250
+	March 6, 2019
+
+	ProgrammingExamPractice
 */
 
 #include "DoublyList.h"

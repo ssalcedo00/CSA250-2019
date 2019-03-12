@@ -262,6 +262,63 @@ int main() {
 	sList6.print();
 	cout << endl;
 
+	/*------------------------List filling-------------------------*/
+	AnyList sList7 = AnyList();
+	{
+		sList7.insertFront(1);
+		sList7.insertFront(2);
+		sList7.insertFront(3);
+		sList7.insertFront(2);
+		sList7.insertFront(1);
+	}
+	AnyList sList8 = AnyList();
+	{
+		sList8.insertFront(1);
+		sList8.insertFront(3);
+		sList8.insertFront(5);
+		sList8.insertFront(3);
+		sList8.insertFront(1);
+	}
+	AnyList sList9 = AnyList();
+	cout << "\nTESTING: sameEnds(const AnyList& list) const" << endl;
+	cout << "    List7: ";
+	sList7.print();
+	cout << "\n    List8: ";
+	sList8.print();
+
+	cout << "\nResult: ";
+	if (sList7.sameEnds(sList8)) cout << "TRUE\n" << endl;
+	else cout << "FALSE\n" << endl;
+	
+	cout << "    List7: ";
+	sList7.print();
+	cout << "\n    List9: ";
+	sList9.print();
+
+	cout << "\nResult: ";
+	if (sList9.sameEnds(sList7)) cout << "TRUE\n" << endl;
+	else cout << "FALSE\n" << endl;
+
+	cout << "\nTESTING: threeSLL(const AnyList& list1, const AnyList& list3)" << endl;
+	cout << "Before: \n    List5: ";
+	sList5.print();
+	cout << "\n    List6: ";
+	sList6.print();
+	cout << "\n    List7: ";
+	sList7.print();
+
+	sList7.threeSLL(sList5, sList6);
+
+	cout << "\nAfter: \n    List5: ";
+	sList5.print();
+	cout << "\n    List6: ";
+	sList6.print();
+	cout << "\n    List7: ";
+	sList7.print();
+
+	cout << "\n" << endl;
+
+
 	system("Pause");
 	return 0;
 }

@@ -43,7 +43,7 @@ void Ferrari::print() const {
 }
 
 bool Ferrari::sameCar(const Ferrari & carComp) const {
-	return (carModel == carComp.getModel() && year == carComp.getYear());
+	return (carModel == carComp.carModel && year == carComp.year);
 }
 
 Ferrari::~Ferrari() {

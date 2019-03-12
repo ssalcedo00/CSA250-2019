@@ -32,6 +32,7 @@ int main() {
 	LaFerrari.setModel("Caca");
 	LaFerrari.setYear(6969);
 	LaFerrari.print();
+	cout << endl;
 
 	system("Pause");
 	return 0;
