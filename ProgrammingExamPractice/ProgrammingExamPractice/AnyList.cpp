@@ -162,18 +162,14 @@ bool AnyList::sameEnds(const AnyList& list) const
 	}	
 }
 
-void AnyList::threeSLL(const AnyList& list1, const AnyList& list3)
-{ 
-	sNode* current = list1.first;
-	while (current->getNext() != nullptr) current = current->getNext();
-	current->setNext(first);
-	current = first;
-	while (current->getNext() != nullptr) current = current->getNext();
-	current->setNext(list3.first);
-	first = list1.first;
-	count += (list1.count + list3.count);
+void AnyList::threeSLL(AnyList& list, const int a[], int numOfElem)
+{
+	//if () cerr << " " << endl;
+	//else 
+	{
+		
+	}
 }
-
 AnyList::~AnyList()
 {
 	destroyList();

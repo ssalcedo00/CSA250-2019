@@ -50,7 +50,7 @@ public:
 
 	void swapVal(AnyList& list); //swap values of 2nd and 2nd to last nodes
 
-	void threeSLL(const AnyList& list1, const AnyList& list3);
+	void threeSLL(AnyList& list, const int a[], int numOfElem);
 
 	//Boolean Functions
 	bool sameEnds(const AnyList& list) const;

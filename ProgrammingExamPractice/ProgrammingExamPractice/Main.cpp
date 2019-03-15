@@ -291,7 +291,7 @@ int main() {
 	else cout << "FALSE\n" << endl;
 	
 	cout << "    List7: ";
-	sList7.print();
+	sList7.print()
 	cout << "\n    List9: ";
 	sList9.print();
 
@@ -299,25 +299,25 @@ int main() {
 	if (sList9.sameEnds(sList7)) cout << "TRUE\n" << endl;
 	else cout << "FALSE\n" << endl;
 
-	cout << "\nTESTING: threeSLL(const AnyList& list1, const AnyList& list3)" << endl;
+	cout << "\nTESTING: threeSLL(AnyList& list, const int a[], int numOfElem)" << endl;
 	cout << "Before: \n    List5: ";
 	sList5.print();
 	cout << "\n    List6: ";
 	sList6.print();
-	cout << "\n    List7: ";
-	sList7.print();
+	cout << "\n    Array: ";
+	for (int i = 0; i < 4; i++) cout << a[i] << " ";
+	cout << endl;
 
-	sList7.threeSLL(sList5, sList6);
+	sList5.threeSLL(sList6, a, aNumOfElem);
+
 
 	cout << "\nAfter: \n    List5: ";
 	sList5.print();
 	cout << "\n    List6: ";
 	sList6.print();
-	cout << "\n    List7: ";
-	sList7.print();
-
-	cout << "\n" << endl;
-
+	cout << "\n    Array: ";
+	for (int i = 0; i < 4; i++) cout << a[i] << " ";
+	cout << endl;
 
 	system("Pause");
 	return 0;
