@@ -1,5 +1,10 @@
 /*
-	(name header)
+	Salcedo, Salvador
+
+	CS A250
+	April 2, 2019
+
+	Lab 8
 */
 
 #include "DPair.h"

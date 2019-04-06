@@ -10,41 +10,36 @@
 #include "DPair.h"
 
 // Declaration overloaded insertion operator
-ostream& operator<<(ostream& out, const DPair& pair)
-{
-	out << "(" << pair.first << ", " << endl;
+ostream& operator<<(ostream& out, const DPair& pair) {
+	out << "(" << pair.first << ", " << *(pair.second) << ")";
 	return out;
 }
 
 // Default constructor
-DPair::DPair()
-{
+DPair::DPair() {
 	first = 0;
 	second = new int(0);
 }
 
 // Overloaded constructor
-DPair::DPair(int newFirst, int newSecond)
-{
+DPair::DPair(int newFirst, int newSecond) {
 	first = newFirst;
 	second = new int(newSecond);
 }
 
 // Copy constructor
-DPair::DPair(const DPair& oldDPair)
-{
-	DPair(oldDPair.first, *(oldDPair.second));
+DPair::DPair(const DPair& oldPair) {
+	first = oldPair.first;
+	second = new int(*(oldPair.second));
 }
 
 // Definition function getFirst
-int DPair::getFirst() const
-{
+int DPair::getFirst() const {
 	return first;
 }
 
 // Definition function getSecond
-int& DPair::getSecond() const
-{
+int DPair::getSecond() const {
 	return *second;
 }
 

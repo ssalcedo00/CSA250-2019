@@ -25,7 +25,7 @@ public:
 	int getFirst() const;
 
 	// Declaration function getSecond
-	int& getSecond() const;
+	int getSecond() const;
 
 	// Declaration function setFirst
 	void setFirst(int newFirst);
