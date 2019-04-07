@@ -87,7 +87,7 @@ void testFunction3()
 		/****************************************************************
 		** TO TEST YOUR IMPLEMENTATION, UNCOMMENT THE STATEMENT BELOW.
 		****************************************************************/
-		//dll.function3(l1,l2);
+		dll.function3(l1,l2);
 
 		cout << "\n\n Expected modified STL list 1 => ";
 		if (l1Result.size() == 0) cout << "(STL list 1 is empty)";

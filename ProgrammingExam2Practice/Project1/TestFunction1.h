@@ -60,7 +60,7 @@ void testFunction1()
 		/****************************************************************
 		** TO TEST YOUR IMPLEMENTATION, UNCOMMENT THE STATEMENT BELOW.
 		****************************************************************/
-		//cout << ((a.function1(v[i]))? "TRUE" : "FALSE");
+		cout << ((a.function1(v[i]))? "TRUE" : "FALSE");
 
 
 		cout << "\n\n------------------------------------------------\n";

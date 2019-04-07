@@ -68,7 +68,7 @@ void testFunction2()
 		/****************************************************************
 		** TO TEST YOUR IMPLEMENTATION, UNCOMMENT THE STATEMENT BELOW.
 		****************************************************************/
-		//dl.function2(l);
+		dl.function2(l);
 
 		cout << "\n\n Expected modified DL list => ";
 		if (lResult.size() == 0) cout << "(list is empty)";
