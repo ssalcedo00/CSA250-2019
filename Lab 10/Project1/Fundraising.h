@@ -1,3 +1,12 @@
+/*
+	Salcedo, Salvador
+
+	CS A250
+	April 15, 2019
+
+	Lab 10
+*/
+
 #ifndef FUNDRAISING_H
 #define FUNDRAISING_H
 
@@ -25,14 +34,14 @@ public:
 	* Set the default ID to 0.
 	* Which other member variables do you need to initialize?
 	*/
-
+	Fundraising();
 
 	/*
 	* Declaration function setID
 	* Re-sets the member variables name and id to 
 	* the given values passed as parameters.
 	*/
-
+	void setID(const string& , int);
 	
 	/*
 	* Declaration function requestBoxes
@@ -41,14 +50,14 @@ public:
 	* If there are not enough boxes to fulfill the request,
 	* print out an error message as shown in the expected output.
 	*/
-
+	void requestBoxes(int numRequested);
 
 	/*
 	* Declaration function justSold
 	* The number of boxes sold in a day by
 	* a fundraiser is reported here.
 	*/
-
+	void justSold(int sold);
 
 	/*
 	* Declaration function getTotalBalance
@@ -56,14 +65,14 @@ public:
 	* a day's activity.
 	* Returns the total balance.
 	*/
-
+	static double getTotalBalance();
 
 	/*
 	* Declaration function getTotalBoxesSold
 	* Returns the total number of boxes sold so far.
 	* Returns the total number of boxes sold by all fundraisers.
 	*/
-
+	static int getTotalBoxesSold();
 
 	/*
 	* Declaration function getTotalBoxesInStorage
@@ -72,10 +81,10 @@ public:
 	* fundraisers still have.
 	* Returns the total number of boxes presently in storage.
 	*/
-
+	static int getTotalBoxesInStorage();
 
 	// Destructor
-
+	~Fundraising();
 
 private:
 	// The total available funds (initial cost is detracted)
@@ -84,7 +93,6 @@ private:
 	static int totalBoxesInStorage;	
 	// Boxes sold so far (this include the ones that fundraisers still have).
 	static int totalBoxesSold;
-
 
 	// Relative to each fundraiser.
 	int boxesSold;

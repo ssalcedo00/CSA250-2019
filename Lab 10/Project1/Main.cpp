@@ -1,3 +1,12 @@
+/*
+	Salcedo, Salvador
+
+	CS A250
+	April 15, 2019
+
+	Lab 10
+*/
+
 #include "Fundraising.h"
 
 #include <iostream>
