@@ -11,7 +11,6 @@
 
 #include "DArray.h"
 #include "DoublyList.h"
-
 #include <vector>
 #include <list>
 
@@ -20,7 +19,6 @@ using namespace std;
 class DArrayChild : public DArray
 {
 public:
-
 	// Definition function function1
 	// Your code here.
 	bool function1(const vector<int>& param) const {
@@ -36,7 +34,6 @@ public:
 			return true;
 		}
 	}
-
 };
 
 class DoublyListChild : public DoublyList
