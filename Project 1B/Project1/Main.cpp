@@ -13,6 +13,7 @@
 
 #include "Course.h"
 #include "CourseType.h"
+#include "CourseList.h"
 
 using namespace std;
 
