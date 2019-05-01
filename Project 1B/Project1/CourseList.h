@@ -1,20 +1,12 @@
 /*
-	Group_Name
-	Huang, Ivy
-	Huynh, William
-	Lee, June
-	Salcedo, Salvador
-
-	CS A250
-	May 1, 2019
-
-	Project 1 - Part B
+	(name header)
 */
 
 #ifndef COURSELIST_H
 #define COURSELIST_H
 
 #include "Course.h"
+#include "CourseType.h"
 
 class Node
 {
@@ -42,10 +34,14 @@ class CourseList
 {
 public:
 	// Default constructor
-	CourseList();
+
 	// Function addCourse
+	void addCourse(const string& newCourseName, int newCourseNumber,
+		double newCourseUnits, const vector<int>& newPrerequisites, char transferable);
 
 	// Boolean functions
+	bool isEmpty() const;
+
 
 	// Print functions
 	void printVocationalCourses() const;
