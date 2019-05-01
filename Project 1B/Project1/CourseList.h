@@ -44,7 +44,8 @@ public:
 	// Default constructor
 	CourseList();
 	// Function addCourse
-
+	void addCourse(const string& newCourseName, int newCourseNumber,
+		double newCourseUnits, const vector<int>& newPrereqs, char newTrans);
 	// Boolean functions
 
 	// Print functions
