@@ -1,5 +1,14 @@
 /*
-	(name header)
+	Group_Name
+	Huang, Ivy
+	Huynh, William
+	Lee, June
+	Salcedo, Salvador
+
+	CS A250
+	May 1, 2019
+
+	Project 1 - Part B
 */
 
 #ifndef COURSELIST_H
@@ -33,12 +42,15 @@ class CourseList
 {
 public:
 	// Default constructor
-
+	CourseList();
 	// Function addCourse
 
 	// Boolean functions
 
 	// Print functions
+	void printVocationalCourses() const;
+	void printCourseByNumber(int courseNum) const;
+	void printPrereqs(int courseNum) const;
 
 	// Function clearList
 
