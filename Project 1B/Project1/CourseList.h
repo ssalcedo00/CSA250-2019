@@ -8,7 +8,7 @@
 	CS A250
 	April 29, 2019
 
-	Project 1 - Part A
+	Project 1 - Part B
 */
 
 #ifndef COURSELIST_H
