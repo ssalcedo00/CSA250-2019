@@ -41,6 +41,7 @@ public:
 		double newCourseUnits, const vector<int>& newPrerequisites, char transferable);
 
 	// Boolean functions
+	bool search(int searchData) const;
 
 	// Print functions
 	void printAllCourses() const;
