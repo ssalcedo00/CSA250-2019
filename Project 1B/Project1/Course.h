@@ -21,7 +21,7 @@
 
 using namespace std;
 
-class Course : CourseType 
+class Course : public CourseType 
 {
 	public:
 		//Constructors

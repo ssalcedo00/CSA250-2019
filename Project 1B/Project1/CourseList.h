@@ -1,11 +1,21 @@
 /*
-	(name header)
+	Group_Name
+	Huang, Ivy
+	Huynh, William
+	Lee, June
+	Salcedo, Salvador
+
+	CS A250
+	April 29, 2019
+
+	Project 1 - Part B
 */
 
 #ifndef COURSELIST_H
 #define COURSELIST_H
 
 #include "Course.h"
+#include "CourseType.h"
 
 class Node
 {
@@ -37,8 +47,11 @@ public:
 	// Function addCourse
 
 	// Boolean functions
+	bool search(int searchData) const;
 
 	// Print functions
+	void printAllCourses() const;
+	void printTransferCourses() const;
 
 	// Function clearList
 

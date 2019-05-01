@@ -48,20 +48,20 @@ void Course::setPrerequisties(int * a, int numOfElem)
 void Course::printCourse() const
 {
 	cout << fixed << showpoint << setprecision(2);
-	cout << CLASS_PREFIX << getCourseNumber() << " - " << getCourseName()
+	cout << getPrefix() << getCourseNumber() << " - " << getCourseName()
 		<< " (" << getCourseUnits() << " units, " 
 		<< ((trans) ? "transferable" : "not transferable") << ")" << endl;
 }
 
 void Course::printPrereqs() const
 {
-	cout << CLASS_PREFIX << getCourseNumber() << " - Prerequisites: ";
+	cout << getPrefix() << getCourseNumber() << " - Prerequisites: ";
 	int num = static_cast<int>(prereqs.size());
 	for (int i = 0; i < num - 1; i++)
 	{
-		cout << CLASS_PREFIX << prereqs[i] << " and ";
+		cout << getPrefix() << prereqs[i] << " and ";
 	}
-	cout << CLASS_PREFIX << prereqs[num - 1];
+	cout << getPrefix() << prereqs[num - 1];
 }
 
 Course::~Course()
