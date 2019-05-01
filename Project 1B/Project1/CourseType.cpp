@@ -13,6 +13,8 @@
 
 #include "CourseType.h"
 
+const string CourseType::prefix = "CS A";
+
 CourseType::CourseType()
 {
 	courseName = "No name assigned";
@@ -45,7 +47,7 @@ double CourseType::getCourseUnits() const
 
 string CourseType::getPrefix() const
 {
-	return CLASS_PREFIX;
+	return prefix;
 }
 
 void CourseType::setCourseName(const string& newCourseName)
@@ -66,7 +68,7 @@ void CourseType::setCourseUnits(double newCourseUnits)
 void CourseType::printCourse() const
 {
 	cout << fixed << showpoint << setprecision(2);
-	cout << CLASS_PREFIX << courseNumber << " - " << courseName
+	cout << prefix << courseNumber << " - " << courseName
 		<< " (" << courseUnits << " units)" << endl;
 }
 

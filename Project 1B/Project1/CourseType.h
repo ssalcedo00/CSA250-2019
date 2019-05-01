@@ -17,10 +17,9 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <vector>
 
 using namespace std;
-
-const string CLASS_PREFIX = "CS A";
 
 class CourseType
 {
@@ -43,6 +42,8 @@ class CourseType
 		~CourseType();
 
 	private:
+		static const string prefix;
+
 		string courseName;
 		int courseNumber;
 		double courseUnits;
