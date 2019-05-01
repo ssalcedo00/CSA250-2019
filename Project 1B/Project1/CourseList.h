@@ -6,7 +6,7 @@
 	Salcedo, Salvador
 
 	CS A250
-	April 29, 2019
+	May 1, 2019
 
 	Project 1 - Part B
 */
@@ -15,7 +15,6 @@
 #define COURSELIST_H
 
 #include "Course.h"
-#include "CourseType.h"
 
 class Node
 {
@@ -44,24 +43,23 @@ class CourseList
 public:
 	// Default constructor
 	CourseList();
-
 	// Function addCourse
-	void addCourse(const string& newCourseName, int newCourseNumber,
-		double newCourseUnits, const vector<int>& newPrerequisites, char transferable);
 
 	// Boolean functions
-	bool isEmpty() const;
-
 
 	// Print functions
+	void printVocationalCourses() const;
+	void printCourseByNumber(int courseNum) const;
+	void printPrereqs(int courseNum) const;
 
 	// Function clearList
+	void clearList();
 
 	// Destructor
-
+	~CourseList();
 private:
 	// Function getCourseLocation
-
+	CourseList * getCourseLocation(int num);
 	
 	Node *first;
 	Node *last;
