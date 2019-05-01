@@ -38,9 +38,10 @@ public:
 
 	// Function addCourse
 	void addCourse(const string& newCourseName, int newCourseNumber,
-		double newCourseUnits, const vector<int>& newPrerequisites, char transferable);
+		double newCourseUnits, const vector<int>& newPrereqs, char newTrans);
 
 	// Boolean functions
+	bool isEmpty() const;
 	bool search(int searchData) const;
 
 	// Print functions
@@ -51,12 +52,13 @@ public:
 	void printPrereqs(int courseNum) const;
 
 	// Function clearList
+	void clearList();
 
 	// Destructor
-
+	~CourseList();
 private:
 	// Function getCourseLocation
-
+	CourseList* getCourseLocation(int num);
 	
 	Node *first;
 	Node *last;

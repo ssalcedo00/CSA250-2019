@@ -1,12 +1,4 @@
-/*
-	(name header)
-*/
 
-	CS A250
-	April 29, 2019
-
-	Project 1 - Part B
-*/
 #include "CourseList.h"
 #include "CourseType.h"
 #include "Course.h"
