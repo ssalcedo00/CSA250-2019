@@ -6,6 +6,7 @@
 #define COURSELIST_H
 
 #include "Course.h"
+#include "CourseType.h"
 
 class Node
 {
@@ -41,12 +42,13 @@ public:
 	// Print functions
 
 	// Function clearList
+	void clearList();
 
 	// Destructor
-
+	~CourseList();
 private:
 	// Function getCourseLocation
-
+	CourseList * getCourseLocation(int num);
 	
 	Node *first;
 	Node *last;
