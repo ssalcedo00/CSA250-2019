@@ -1,14 +1,5 @@
 /*
-	Group_Name
-	Huang, Ivy
-	Huynh, William
-	Lee, June
-	Salcedo, Salvador
-
-	CS A250
-	April 29, 2019
-
-	Project 1 - Part A
+	(name header)
 */
 
 #ifndef COURSELIST_H
@@ -50,10 +41,10 @@ public:
 		double newCourseUnits, const vector<int>& newPrerequisites, char transferable);
 
 	// Boolean functions
-	bool isEmpty() const;
-
 
 	// Print functions
+	void printAllCourses() const;
+	void printTransferCourses() const;
 
 	// Function clearList
 
