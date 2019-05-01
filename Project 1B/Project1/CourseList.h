@@ -8,7 +8,7 @@
 	CS A250
 	April 29, 2019
 
-	Project 1 - Part B
+	Project 1 - Part A
 */
 
 #ifndef COURSELIST_H
@@ -43,15 +43,17 @@ class CourseList
 {
 public:
 	// Default constructor
+	CourseList();
 
 	// Function addCourse
+	void addCourse(const string& newCourseName, int newCourseNumber,
+		double newCourseUnits, const vector<int>& newPrerequisites, char transferable);
 
 	// Boolean functions
-	bool search(int searchData) const;
+	bool isEmpty() const;
+
 
 	// Print functions
-	void printAllCourses() const;
-	void printTransferCourses() const;
 
 	// Function clearList
 
