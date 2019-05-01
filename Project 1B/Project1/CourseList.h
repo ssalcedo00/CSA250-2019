@@ -46,12 +46,13 @@ public:
 	void printTransferCourses() const;
 
 	// Function clearList
+	void clearList();
 
 	// Destructor
-
+	~CourseList();
 private:
 	// Function getCourseLocation
-
+	CourseList* getCourseLocation();
 	
 	Node *first;
 	Node *last;
