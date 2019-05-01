@@ -46,6 +46,9 @@ public:
 	// Print functions
 	void printAllCourses() const;
 	void printTransferCourses() const;
+	void printVocationalCourses() const;
+	void printCoursebyNumber(int courseNum) const;
+	void printPrereqs(int courseNum) const;
 
 	// Function clearList
 

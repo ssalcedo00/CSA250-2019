@@ -93,13 +93,41 @@ void CourseList::printTransferCourses() const
 }
 
 // Definition printVocationalCourses
+void CourseList::printVocationalCourses() const
+{
+	Node *current = first;
 
+	while (current != nullptr)
+	{
+		if (current->getCourse().isTransferable() == false)
+		{
+			cout << current->getCourse().getPrefix() <<
+				current->getCourse().getCourseNumber() << " - "
+				<< current->getCourse().getCourseName() << endl;
+		}
+
+		current = current->getNext();
+	}
+
+}
 
 // Definition printCourseByNumber
+void CourseList::printCoursebyNumber(int courseNum) const
+{
+	Node *current = getCourseLocation(courseNum);
 
+	current->getCourse().printCourse();
+
+}
 
 // Definition printPrereqs
+void CourseList::printPrereqs(int courseNum) const
+{
+	Node *current = getCourseLocation(courseNum);
 
+	current->getCourse().printPrereqs();
+
+}
 
 // Definition clearList
 void CourseList::clearList()
