@@ -1,3 +1,15 @@
+/*
+	Group_Name
+	Huang, Ivy
+	Huynh, William
+	Lee, June
+	Salcedo, Salvador
+
+	CS A250
+	May 1, 2019
+
+	Project 1 - Part B
+*/
 
 #include "CourseList.h"
 #include "CourseType.h"
@@ -17,12 +29,20 @@ void CourseList::addCourse(const string& newCourseName, int newCourseNumber,
 	double newCourseUnits, const vector<int>& newPrereqs, char newTrans)
 {
 	Course newCourse(newCourseName, newCourseNumber, newCourseUnits, newPrereqs, newTrans);
+	if (count == 0) 
+	{
+		first = new Node(newCourse, nullptr);
+		last = first;
+		count++;
+	}
 
-	Node *newNode = new Node(newCourse, nullptr);
-
-	last->setNext(newNode);
-	last = newNode;
-
+	else 
+	{
+		Node* newNode = new Node(newCourse, nullptr);
+		count++;
+		last->setNext(newNode);
+		last = newNode;
+	}
 }
 
 // Definition function isEmpty
@@ -36,11 +56,11 @@ bool CourseList::isEmpty() const
 }
 
 // Definition searchCourse
-bool CourseList::search(int searchData) const
+bool CourseList::searchCourse(int searchData) const
 {
 	Node *current = first;
 
-	while (current != nullptr)
+	while (current->getNext() != nullptr)
 	{
 		if (current->getCourse().getCourseNumber() == searchData)
 			return true;
@@ -56,7 +76,7 @@ void CourseList::printAllCourses() const
 {
 	Node *current = first;
 
-	while (current != nullptr)
+	while (current->getNext() != nullptr)
 	{
 		cout << current->getCourse().getPrefix() << 
 			current->getCourse().getCourseNumber() << " - "
@@ -89,7 +109,7 @@ void CourseList::printVocationalCourses() const
 {
 	Node *current = first;
 
-	while (current != nullptr)
+	while (current->getNext() != nullptr)
 	{
 		if (current->getCourse().isTransferable() == false)
 		{
@@ -104,7 +124,7 @@ void CourseList::printVocationalCourses() const
 }
 
 // Definition printCourseByNumber
-void CourseList::printCoursebyNumber(int courseNum) const
+void CourseList::printCourseByNumber(int courseNum) const
 {
 	Node *current = getCourseLocation(courseNum);
 
@@ -118,23 +138,21 @@ void CourseList::printPrereqs(int courseNum) const
 	Node *current = getCourseLocation(courseNum);
 
 	current->getCourse().printPrereqs();
+	cout << endl;
 
 }
 
 // Definition clearList
 void CourseList::clearList()
 {
-	Node* current = first->getNext();
-	while(current != nullptr) 
+	while(first != nullptr) 
 	{
-		first->setNext(current->getNext());
+		Node* current = first;
+		first = first->getNext();
 		delete current;
-		current = first->getNext();
+		current = nullptr;
 	}
-	delete first;
 	last = nullptr;
-	first = nullptr;
-	current = nullptr;
 	count = 0;
 }
 
@@ -145,17 +163,21 @@ CourseList::~CourseList()
 }
 
 // Definition function getCourseLocation
-CourseList* CourseList::getCourseLocation(int num)
+Node* CourseList::getCourseLocation(int num) const
 {
-	/*
 	if (searchCourse(num)) 
 	{
 		Node* current = first;
-		while (current != nullptr) {
-			if(current->getCourse().getCourseNumber() == num)
+		while (current->getNext() != nullptr) 
+		{
+			if (current->getCourse().getCourseNumber() == num)
+			{
+				return current;
+			}
+			else
+				current = current->getNext();
 		}
 	}
 	else 
-	*/
 		return nullptr;
 }

@@ -6,9 +6,9 @@
 	Salcedo, Salvador
 
 	CS A250
-	April 29, 2019
+	May 1, 2019
 
-	Project 1 - Part A
+	Project 1 - Part B
 */
 
 #include "Course.h"

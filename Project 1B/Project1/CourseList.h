@@ -1,5 +1,14 @@
 /*
-	(name header)
+	Group_Name
+	Huang, Ivy
+	Huynh, William
+	Lee, June
+	Salcedo, Salvador
+
+	CS A250
+	May 1, 2019
+
+	Project 1 - Part B
 */
 
 #ifndef COURSELIST_H
@@ -42,13 +51,13 @@ public:
 
 	// Boolean functions
 	bool isEmpty() const;
-	bool search(int searchData) const;
+	bool searchCourse(int searchData) const;
 
 	// Print functions
 	void printAllCourses() const;
 	void printTransferCourses() const;
 	void printVocationalCourses() const;
-	void printCoursebyNumber(int courseNum) const;
+	void printCourseByNumber(int courseNum) const;
 	void printPrereqs(int courseNum) const;
 
 	// Function clearList
@@ -58,7 +67,7 @@ public:
 	~CourseList();
 private:
 	// Function getCourseLocation
-	CourseList* getCourseLocation(int num);
+	Node* getCourseLocation(int num) const;
 	
 	Node *first;
 	Node *last;
