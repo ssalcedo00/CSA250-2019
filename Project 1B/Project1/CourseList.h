@@ -34,19 +34,18 @@ class CourseList
 {
 public:
 	// Default constructor
+	CourseList();
 
 	// Function addCourse
 	void addCourse(const string& newCourseName, int newCourseNumber,
 		double newCourseUnits, const vector<int>& newPrerequisites, char transferable);
 
 	// Boolean functions
-	bool isEmpty() const;
-
+	bool search(int searchData) const;
 
 	// Print functions
-	void printVocationalCourses() const;
-	void printCourseByNumber(int courseNum) const;
-	void printPrereqs(int courseNum) const;
+	void printAllCourses() const;
+	void printTransferCourses() const;
 
 	// Function clearList
 
